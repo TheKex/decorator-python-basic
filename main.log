@@ -1,5 +1,0 @@
-call hello_world(); result: Hello World
-call summator(2, 2); result: 4
-call div(6, 2); result: 3.0
-call summator(4.3, b=2.2); result: 6.5
-call summator(a=0, b=0); result: 0
