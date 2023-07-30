@@ -1,10 +1,12 @@
 import os
+from datetime import datetime
 
 
 def logger(old_function):
     def new_function(*args, **kwargs):
         with open("main.log", "a") as file:
-            log = f"call {old_function.__name__}" \
+            log = f"{datetime.now().strftime('%d.%m.%Y %H:%M:%S')} " \
+                  f"call {old_function.__name__}" \
                   f"({', '.join([str(arg) for arg in args])}" \
                   f"{', ' if len(args) and len(kwargs) else ''}" \
                   f"{', '.join([key + '=' + str(value) for key, value in kwargs.items()])}); "
